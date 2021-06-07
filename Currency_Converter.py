@@ -13,11 +13,12 @@ root.title("Currency Converter")
 root.geometry("500x400")
 root.config(bg="Black")
 
-value = IntVar()
+value = StringVar()
+StringVar = IntVar()
 # Retrieving the information from an external JSON file as a source of reference
 
 
-information = requests.get('https://v6.exchangerate-api.com/v6/89dcd9e8cc7777ded2575ce1/latest/USD')
+information = requests.get('https://v6.exchangerate-api.com/v6/3b6104d9c62069d198e73219/latest/USD')
 information_json = information.json()
 
 conversion_rate = information_json['conversion_rates']
